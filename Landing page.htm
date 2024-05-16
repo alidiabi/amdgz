@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Landing%20page_files/bootstrap.css">
+  <!-- IMPORT CDN FONT AWESOME -->
+  <link rel="stylesheet" href="Landing%20page_files/all.css">
+  <!-- IMPORT FILE CSS -->
+  <link rel="stylesheet" href="Landing%20page_files/style.css">
+  <!-- IMPORT BOOTSTRAP -->
+  <title>Landing page</title>
+</head>
+
+<body>
+
+  <!-- particles.js container -->
+  <main class="d-flex">
+
+    <!-- start modal -->
+
+    <button type="button" class="btn btn-primary error__div d-none" data-bs-toggle="modal" data-bs-target="#error">
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           <span class="text-danger">تنويته : </span> مع الأسف لا توجد أي جوائز لدولتك حالياً!
+          </div>
+        </div>
+      </div>
+    </div> 
+ <!-- end modal -->
+    
+    <!-- Overlay -->
+      <div class="overlay my-3 d-flex justify-content-center text-center">
+        <!-- Overlay inner wrapper -->
+        <div class="overlay__inner text-light" style="width: 100%;">
+
+          <div class="default">
+            <img src="Landing%20page_files/GiftDash.png" alt="GiftDash" width="80px">
+            <h1 class="overlay__title my-5">مرحباً بكم في الصفحة الرسمية لمسابقات<br>غازي الذيابي</h1>
+
+            <div class="overlay__register overlay__offer--colors mb-5 mt-3">
+              <button class="p-2 register__in___challange">
+                <h4>التسجيل في المسابقة</h4>
+              </button>
+            </div>
+          </div>
+
+          <div class="enter__you_____name" style="display: none;">
+            <img src="Landing%20page_files/GiftDash.png" alt="GiftDash" width="80px">
+            <h1 class="overlay__title my-5">من فضلك ادخل اسمك!</h1>
+            <form id="n______m">
+              <input type="text" class="form-control text-center" id="name" name="name" dir="auto" required="">
+              <input type="submit" class="form-control" id="btnNext" value="تابع">
+            </form>
+          </div>
+
+          <div class="countries fadeInUp" style="display: none;">
+            <form id="chooseCountries">
+              <img src="Landing%20page_files/GiftDash.png" alt="GiftDash" width="80px">
+              <h1 class="overlay__title my-5"> اختر دلولتك من بين الدول التالية! </h1>
+
+              <div class="radio-inputs">
+                <label>
+                  <input class="radio-input" type="radio" name="country" value="عمان">
+                    <span class="radio-tile">
+                      <span class="radio-icon">
+                        <img src="Landing%20page_files/oman.png" alt="Oman" width="32px">
+                      </span>
+                      <span class="radio-label">عمان</span>
+                    </span>
+                </label>
+                
+                <label>
+                  <input checked="checked" class="radio-input" type="radio" name="country" value="السعودية">
+                  <span class="radio-tile">
+                    <span class="radio-icon">
+                      <img src="Landing%20page_files/UA.png" alt="UA" width="32px">
+                    </span>
+                    <span class="radio-label">السعودية</span>
+                  </span>
+                </label>
+                
+                <label>
+                  <input class="radio-input" type="radio" name="country" value="الإمارات">
+                  <span class="radio-tile">
+                    <span class="radio-icon">
+                      <img src="Landing%20page_files/UAE.png" alt="UAE" width="32px">
+                    </span>
+                    <span class="radio-label">الإمارات</span>
+                  </span>
+                </label>
+                
+                <label>
+                  <input class="radio-input" type="radio" name="country" value="قطر">
+                  <span class="radio-tile">
+                    <span class="radio-icon">
+                      <img src="Landing%20page_files/QR.png" alt="QR" width="32px">
+                    </span>
+                    <span class="radio-label">قطر</span>
+                  </span>
+                </label>
+
+                <label>
+                  <input class="radio-input" type="radio" name="country" value="الكويت">
+                  <span class="radio-tile">
+                    <span class="radio-icon">
+                      <img src="Landing%20page_files/KU.png" alt="UA" width="32px">
+                    </span>
+                    <span class="radio-label">الكويت</span>
+                  </span>
+                </label>
+                
+                <label>
+                  <input class="radio-input" type="radio" name="country" value="أخرى">
+                  <span class="radio-tile">
+                    <span class="radio-icon">
+                      <img src="Landing%20page_files/menu.png" alt="UA" width="32px">
+                    </span>
+                    <span class="radio-label">أخرى..</span>
+                  </span>
+                </label>
+
+                <input type="submit" class="form-control mx-0" id="btnNextAfterCountry" value="تابع">
+
+            </div>
+            </form>
+          </div>
+
+          <div class="country__city fadeInUp" style="display: none;">
+            <form id="country__city">
+              <img src="Landing%20page_files/GiftDash.png" alt="GiftDash" width="80px">
+              <h1 class="overlay__title mt-5 mb-4">اكتب اسم مدينتك</h1>
+
+              <input type="text" class="form-control text-center" id="s_country__" name="country" dir="auto" required="">
+              <input type="submit" class="form-control mt-4" value="تابع">
+            </form>
+          </div>
+
+          <div class="challange fadeInUp active text-light" style="display: none;">
+            <form id="chooseChallange" class="d-flex justify-content-center align-items-center">
+              <img src="Landing%20page_files/GiftDash.png" alt="GiftDash" width="80px">
+              <h1 class="overlay__title my-5">اختر نوع المسابقة التي تريد !</h1>
+
+              <div class="radio-inputs">
+                <label>
+                  <input class="radio-input" type="radio" name="challange" value="Iphone">
+                    <span class="radio-tile">
+                      <span class="radio-icon">
+                        <img src="Landing%20page_files/iphone.png" alt="Oman" width="32px">
+                      </span>
+                      <span class="radio-label">Iphone</span>
+                    </span>
+                </label>
+                
+                <label>
+                  <input checked="checked" class="radio-input" type="radio" name="challange" value="Money">
+                  <span class="radio-tile">
+                    <span class="radio-icon">
+                      <img src="Landing%20page_files/money.png" alt="UA" width="32px">
+                    </span>
+                    <span class="radio-label">Money</span>
+                  </span>
+                </label>
+
+                <!-- <br> -->
+                
+                <label>
+                  <input class="radio-input" type="radio" name="challange" value="Lexus">
+                  <span class="radio-tile">
+                    <span class="radio-icon">
+                      <img src="Landing%20page_files/car1.png" alt="QR" width="32px">
+                    </span>
+                    <span class="radio-label">Lexus</span>
+                  </span>
+                </label>
+                
+                <label>
+                  <input class="radio-input" type="radio" name="challange" value="Mercedes">
+                  <span class="radio-tile">
+                    <span class="radio-label">الجائزة الكبرى</span>
+                    <span class="radio-icon">
+                      <img src="Landing%20page_files/car.png" alt="UAE" width="32px">
+                    </span>
+                    <span class="radio-label">Mercedes</span>
+                  </span>
+                </label>
+                
+
+                <input type="submit" class="form-control mx-0" value="تابع">
+
+              </div>
+
+            </form>
+          </div>
+
+          <div class="last___page fadeInUp text-light" style="display: none;">
+            <img src="Landing%20page_files/GiftDash.png" alt="GiftDash" width="80px">
+            <h1 class="overlay__title mt-5 mb-4">قم بالاتباع الخطوات التالية لتسجيل رقم هاتفك :</h1>
+            
+            <div class="steps">
+              <img src="Landing%20page_files/1.png" alt="step 1">
+              <img src="Landing%20page_files/2.png" alt="step 2">
+              <img src="Landing%20page_files/3.png" alt="step 3">
+            </div>
+
+            <input type="submit" class="form-control mt-4 bg-none" value="تأكيد رقم الهاتف" id="btn__locker">
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    <div class="overlay__win mt-4">
+        <div id="overlay__win___" class="my-3 d-flex justify-content-center text-center slideInRight">
+              <div id="gift" class="gift row d-flex justify-content-center align-items-center w-100"> 
+                  <div class="col-3 pe-1 gift__img">
+                      <img src="Landing%20page_files/iphone.png" alt="gift" width="95px">
+                  </div> 
+
+                  <div class="text__ col-8 text-end">
+                      <h2>مبروك</h2>
+                      <small class="m-0">
+                      مبروك لواليد لقد فاز معنا ب Iphone 12 pro
+                      </small>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+    
+    
+    <div id="myiframe" class="iframe-container">
+      <i class="fas fa-times close-button close-icon" onclick="closeIframe()"></i>
+      <iframe src="Landing%20page_files/48ad204.htm" id="iframeLocker" marginwidth="0" marginheight="0" width="100%" height="100%" frameborder="0" align="middle"></iframe>
+    </div>
+
+  </main>
+
+  <section><canvas class="canvas__" width="1280" height="647"></canvas></section>
+
+  <!-- IMPORT BOOTSTRAP -->
+  <script src="Landing%20page_files/bootstrap.js"></script>
+  <script src="Landing%20page_files/jquery-2.js"></script>
+
+  <script src="Landing%20page_files/effects.js"></script>
+  <script src="Landing%20page_files/main.js"></script>
+
+  <script>
+    var button = document.getElementById('btn__locker');
+    var iframeContainer = document.getElementById('myiframe');
+
+    button.addEventListener('click', function() {
+      iframeContainer.classList.add('active'); // إضافة الفئة active لعرض الإطار
+    });
+
+    function closeIframe() {
+      iframeContainer.classList.remove('active'); // إزالة الفئة active لإخفاء الإطار
+    }
+  </script>
+
+
+
+</body></html>
